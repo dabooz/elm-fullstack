@@ -28,7 +28,7 @@ jobs:
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         body: |
-          This is a multi-line test comment
+          This is a multi-line test comment from environment ${{ matrix.environment }}
           - With GitHub **Markdown**
           - Created by [commit-comment][1]
 
