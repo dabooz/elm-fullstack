@@ -15,6 +15,12 @@ steps:
 
 - script: dotnet --version
 
+- task: NugetToolInstaller@1
+- task: DotNetCoreCLI@2
+  inputs:
+    command: restore
+    projects: '{your project}'
+
 - script: dotnet test ./implement/PersistentProcess/PersistentProcess.Test/PersistentProcess.Test.csproj --logger trx
   displayName: 'test'
 
