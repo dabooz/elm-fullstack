@@ -19,7 +19,9 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: restore
-    projects: '{your project}'
+    projects: |
+      **/PersistentProcess.Test.csproj
+      **/elm-fullstack.csproj
 
 - task: DotNetCoreCLI@2
   displayName: 'test'
